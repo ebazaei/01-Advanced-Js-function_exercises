@@ -14,7 +14,7 @@
 
 
 let checkAge=age => (age >= 18) ? console.log("true") : confirm('Do you have your parents permission to access this page?');
-checkAge(10)
+checkAge(21)
 
                                          
 // Exercise 2 -----------------------------------------------------------------
@@ -56,7 +56,51 @@ console.log(pow(3,3))
 // )
 
 
+let ask=(question, Yes,No) => confirm(question)? Yes(): No();
+ask("Do you agree?", ()=> alert("You agreed."), alert("You canceled the execution.") );
 
-// let ask=(question, Yes,No) => confirm(question)? Yes(): No();
-// ask("Do you agree?", ()=> alert("You agreed."), alert("You canceled the execution.") );
+
+
+// Exercise 4 -----------------------------------------------------------------
+
+// Create an object calculator with three methods:
+// read() prompts for two values and saves them as object properties.
+// sum() returns the sum of saved values.
+// mul() multiplies saved values and returns the result.
+
+// let calculator = {
+//     // ... your code ...
+// };
+//   calculator.read();
+//   alert( calculator.sum() );
+//   alert( calculator.mul() );
+
+let calculator = {
+    num1: 0,
+    num2: 0,
+    read(){ num1=prompt('first number', 0); num2=prompt('first number', 0); },
+    sum(){ return parseInt(num1) + parseInt(num2); },
+    mul(){return (num1) * (num2);}
+};
+  calculator.read();
+  alert( calculator.sum());
+  alert( calculator.mul());
+
+
+
+  
+// Exercise 5 -----------------------------------------------------------------
+// Write a function min(a,b) which returns the least of two numbers a and b. Use 
+// arrow function along with the question mark operator ?
+
+// function min(num1,num2){
+//     if (num1<num2){
+//         return num1;
+//     }else{
+//         return num2;
+//     }
+// }
+
+let min=(num1,num2) => (num1<num2)?  num1:  num2;
+console.log(min(220,200));
 
