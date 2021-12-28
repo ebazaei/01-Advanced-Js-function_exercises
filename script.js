@@ -13,9 +13,9 @@
 //Rewrite it, to perform the same, but without if...else, and using arrow function.
 
 
-let age=19
-let checkAge = (age >= 18) ? age => console.log("true") : age => confirm('Do you have your parents permission to access this page?');
-checkAge(age)
+let checkAge=age => (age >= 18) ? console.log("true") : confirm('Do you have your parents permission to access this page?');
+checkAge(10)
+
                                          
 // Exercise 2 -----------------------------------------------------------------
 
@@ -35,15 +35,28 @@ checkAge(age)
 // console.log(pow(3,3))
 
 
-
 let pow = (x,n) => {let result = x;  for (let i = 1; i < n; i++) {result *=  x;}return result; };
-
 
 console.log(pow(3,3))
 
 
 
+// Exercise 3 -----------------------------------------------------------------
+
+//Replace Function Expressions with arrow functions in the code:
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no()
+// }
+
+// ask(
+//     "Do you agree?",
+//     function() { alert("You agreed.") },
+//     function() { alert("You canceled the execution.") }
+// )
 
 
 
+// let ask=(question, Yes,No) => confirm(question)? Yes(): No();
+// ask("Do you agree?", ()=> alert("You agreed."), alert("You canceled the execution.") );
 
